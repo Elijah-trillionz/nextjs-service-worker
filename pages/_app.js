@@ -5,7 +5,7 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
-        .register('/service-worker.js', { scope: '/docs' })
+        .register('/service-worker.js', { scope: '/' })
         .then((registration) => console.log('scope is: ', registration.scope));
     }
   }, []);
